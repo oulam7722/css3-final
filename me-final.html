@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div { 
+      width: 100%;
+      height: 100px;
+      display: inline-block;
+      position: relative;
+      text-align: center;
+    } 
+
+    #box { /the box color and the way it transferes through colors. with the amount of transarency it has/
+        background: darkviolet;
+        box-shadow: 5px 5px 5px rgba(0,0,0,1.5);
+        animation: example 5s linear 2s infinite alternate;
+    }
+    
+    @-webkit-keyframes example { /the colors i wanted the first box to change/
+    0%   {background-color:red}
+    25%  {background-color:yellow}
+    50%  {background-color:blue}
+    75%  {background-color:green}
+    100% {background-color:red}
+    }
+    
+    body{ 
+        background-image: url("flamingo.png"); /the image importation/
+    }
+   
+    p{
+        color: black; /the color of the words/
+        text-shadow: 0 0 10px #FF0000, 0 0 5px #0000FF;
+        font-size: 50px;
+    }
+    
+    #box2{
+        background: radial-gradient(purple 5%,darkviolet 15%, violet 60%); /the color mix i want he box to have and how the transfer appears between each one/
+        position: relative;
+        top: 50px;
+    }
+     #box2:hover{ 
+        height: 300px;
+    }
+   /this makes the box2 expant like am anitmation/
+</style>
+</head>
+<body>
+
+
+<div id="box"><p>Oula Mahfouz</p></div>
+<div id="box2"><p>hover here!</p></div>   
+/what is gonna be printed onto the boxes/
+
+
+</body>
+</html>
